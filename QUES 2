@@ -1,0 +1,12 @@
+#include <iostream>
+int main()
+{
+    using namespace std;
+    int r;
+    cout << "enter the radius of a circle:";
+    cin >> r;
+    float pi = 3.14;
+    int area = pi * r * r;
+    cout << "Area of circle is:" << area;
+    return 0;
+}
