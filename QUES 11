@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int item;
+    cout << "enter the item:";
+    cin >> item;
+    int price;
+    cout << "enter the total price:";
+    cin >> price;
+    int disc;
+    int total;
+    if (item >= 1000)
+    {
+        disc = price * 0.10;
+        total = price - disc;
+        cout << "the total price after discout is :" << total;
+    }
+    else
+    {
+        cout << "total amount is :" << price;
+    }
+    return 0;
+}
