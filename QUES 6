@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cout << "Enter the number of employees:";
+    cin >> n;
+    int basic;
+    int bonus;
+    int net_s;
+    int i;
+    for (i = 1; i <= n; i++)
+    {
+        cout << endl
+             << "Enter the basic  salary of " << i << " employee :";
+        cin >> basic;
+        bonus = basic * 0.12;
+        net_s = basic + bonus;
+        cout << "the bonus of " << i << " employee is:" << bonus;
+        cout << endl
+             << "the net salary of " << i << " employee is:" << net_s;
+    }
+    return 0;
+}
