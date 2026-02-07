@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int item_no;
+    cout << "Enter the item number:";
+    cin >> item_no;
+    int quantity;
+    cout << "Enter the quantity:";
+    cin >> quantity;
+    int unit_price;
+    cout << "Enter the unit price:";
+    cin >> unit_price;
+    int total;
+    total = ((unit_price)*quantity) - (0.20 * unit_price * quantity);
+    cout << endl
+         << "The total price after discount is:" << total;
+    return 0;
+}
