@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int m1, m2, m3, m4, m5;
+    int total;
+    float perc;
+
+    cout << "Enter marks of 5 subjects: ";
+    cin >> m1 >> m2 >> m3 >> m4 >> m5;
+    total = m1 + m2 + m3 + m4 + m5;
+    perc = total / 5.0;
+    cout << "Total Marks = " << total << endl;
+    cout << "Percentage= " << perc << "%";
+
+    return 0;
+}
