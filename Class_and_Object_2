@@ -1,0 +1,69 @@
+#include <iostream>
+using namespace std;
+class BankAccount
+{
+    string accountHolderName;
+    int accountNumber;
+    double balance;
+    /*BankAccount();
+ // default constructor*/
+public:
+    BankAccount(string name, int number, double b); // parametarized constructor
+
+public:
+    void inputDetails();
+    void displayDetails();
+    void deposit(double amount);
+    void withdraw(double amount);
+};
+BankAccount::BankAccount(string name, int number, double b)
+{
+    accountHolderName = name;
+    accountNumber = number;
+    balance = b;
+}
+/*whenever we are making a method outside the class we need to write return type class name scope resolution method name.   for ex;  void BankAccount:: displaydetails()*/
+
+void BankAccount::inputDetails()
+{
+    cout << "Enter account holder name: \n  Enter account number : \n Enter balance: ";
+    cin >> accountHolderName >> accountNumber >> balance; /* or to get a full name use. cin.ignore();  getline(cin,accountholdername);*/
+}
+void BankAccount::displayDetails()
+{
+    cout << "\n Account Holder Name:" << accountHolderName << "\n Account Number:" << accountNumber << "\n Balance:" << balance;
+}
+
+void BankAccount::deposit(double amount)
+{
+    balance += amount;
+    cout << "\n Amount deposited. \n Balance:" << balance;
+}
+void BankAccount::withdraw(double amount)
+{
+    if (balance > amount)
+    {
+        balance -= amount;
+        cout << "Amount withdraw \n Balance:" << balance;
+    }
+    else
+        cout << " \n Insufficient amount.. request denied";
+}
+int main()
+{
+    BankAccount acc1("abc", 56, 4567);
+    acc1.inputDetails();
+    acc1.displayDetails();
+    string choice;
+    cout << "\n Enter D for deposit and W for withdraw: ";
+    cin >> choice;
+    if (choice == "W")
+    {
+        acc1.withdraw(5000);
+    }
+    else
+    {
+        acc1.deposit(10000);
+    }
+    acc1.displayDetails();
+}
