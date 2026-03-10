@@ -1,0 +1,68 @@
+#include <iostream>
+using namespace std;
+class candy
+{
+    string color;
+    int points;
+
+public:
+    candy();                    // default constructor
+    candy(string clr);          // parametarized
+    candy(string clr, int pts); // parametarizrd
+    void setCandy(string, int);
+    void displayCandy();
+    void loose_candy();
+    void loose_candy(int);
+    void gain_candy();
+    void gain_candy(int);
+};
+candy::candy()
+{
+    color = "Black";
+    points = 0;
+}
+candy::candy(string clr)
+{
+    color = clr;
+    points = 0;
+}
+candy::candy(string clr, int pts)
+{
+    color = clr;
+    points = pts;
+}
+void candy::setCandy(string c, int p)
+{
+    color = c;
+    points = p;
+}
+void candy::displayCandy()
+{
+    cout << "\n color:" << color;
+    cout << "\n points: " << points;
+}
+void candy::loose_candy()
+{
+    color = "red";
+    points -= 2;
+}
+void candy::loose_candy(int p)
+{
+    color = "red";
+    points -= p;
+    if (points < 0)
+    {
+        points = 0;
+    }
+}
+int main()
+{
+    candy c1, c2("black", 3);
+    // c1.setCandy("red", 45);
+    // c2.setCandy("blue", 89);
+    c1.loose_candy(4);
+    c1.displayCandy();
+    c2.displayCandy();
+
+    return 0;
+}
