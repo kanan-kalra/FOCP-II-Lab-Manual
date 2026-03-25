@@ -1,0 +1,38 @@
+/*#include <iostream>
+using namespace std;
+int main()
+{
+    int a;
+    int arr[] = {2, 51, 4, 1122, 24};
+    a = sizeof(arr) / 4;
+    int mx;
+    mx = arr[0];
+    for (int i = 1; i < a; i++)
+    {
+        mx = max(mx, arr[i]);
+    }
+    cout << mx;
+    return 0;
+}*/
+
+// another method without using max()
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a;
+    int arr[] = {2, 51, 4, 1122, 24};
+    a = sizeof(arr) / 4;
+    int mx;
+    mx = arr[0];
+    for (int i = 1; i < a; i++)
+    {
+        if (mx < arr[i])
+        {
+            mx = arr[i];
+        }
+    }
+    cout << mx;
+    return 0;
+}
