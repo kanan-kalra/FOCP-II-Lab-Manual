@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a;
+    int arr[] = {2, 51, 4, 1122, 24, 2468};
+    a = sizeof(arr) / 4;
+    int mx;
+    mx = INT_MIN;
+    for (int i = 0; i < a; i++)
+    {
+        mx = max(mx, arr[i]);
+    }
+    int smax;
+    smax = INT_MIN;
+    for (int i = 0; i < a; i++)
+    {
+        if (arr[i] != mx)
+        {
+            smax = max(smax, arr[i]);
+        }
+    }
+    cout << smax;
+    return 0;
+}
