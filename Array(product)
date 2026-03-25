@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a;
+    int product = 1;
+    int arr[] = {2, 1, 4, 2, 2};
+    a = sizeof(arr) / 4;
+    for (int i = 0; i < a; i++)
+    {
+        product *= arr[i];
+    }
+    cout << product;
+    return 0;
+}
